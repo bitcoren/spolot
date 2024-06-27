@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+hash=$(ipfs add -r --nocopy -Q "$SPOLOT/data/share/log")
+ipfspub "$hash"

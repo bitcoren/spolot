@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+
+cd $SPOLOT
+source venv/bin/activate
+export READER_DB=$SPOLOT/data/db.sqlite
+feedout="$SPOLOT/data/share/log/feeds.csv"
+feedin="$SPOLOT/data/feeds.csv"
+
+while [ -s "$feedin" ]; do
+    feed=$(head -n 1 "$feedin" | awk '{print $2}')
+echo $feed
+    python -m reader add $feed
+    echo -e "$(head -n 1 $feedin)" >> $feedout
+    sed -i "1d" "$feedin"
+done
+
+python -m reader update
+python -m reader list feeds
+logupdate
