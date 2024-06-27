@@ -9,9 +9,9 @@ fi
 
 arch=$(uname -m)
 if [[ "$arch" == "x86_64" ]]; then
-    ipfsdistr="https://github.com/ipfs/kubo/releases/download/v0.29.0-rc1/kubo_v0.29.0-rc1_linux-amd64.tar.gz"
+    ipfsdistr="https://github.com/ipfs/kubo/releases/download/v0.29.0/kubo_v0.29.0_linux-amd64.tar.gz"
 elif [[ "$arch" == "aarch64" ]]; then
-    ipfsdistr="https://github.com/ipfs/kubo/releases/download/v0.29.0-rc1/kubo_v0.29.0-rc1_linux-arm64.tar.gz"
+    ipfsdistr="https://github.com/ipfs/kubo/releases/download/v0.29.0/kubo_v0.29.0_linux-arm64.tar.gz"
 fi
 
 mkdir -p temp apps data/share/log
