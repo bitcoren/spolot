@@ -6,7 +6,7 @@
 ```
 # Spolot
 
-Spolot - link processor / Сполот - обработчик ссылок
+Spolot - processor of titles / Сполот - обработчик заголовков
 
 Warning:  
 This is alpha software. Use at your own discretion!  
