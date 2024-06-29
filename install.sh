@@ -21,7 +21,7 @@ echo IPFS_PATH="$PWD/data/.ipfs" | sudo tee -a /etc/environment
 source /etc/environment
 echo -e "PATH=$PATH\nSPOLOT=$PWD\nIPFS_PATH=$IPFS_PATH\n$(sudo crontab -l)\n" | sudo crontab -
 sudo DEBIAN_FRONTEND=noninteractive apt full-upgrade -yq
-sudo DEBIAN_FRONTEND=noninteractive apt install -y docker.io docker-compose build-essential python3-dev python3-pip python3-venv tmux links2 cron
+sudo DEBIAN_FRONTEND=noninteractive apt install -y docker.io docker-compose build-essential python3-dev python3-pip python3-venv tmux links2 cron btop
 sudo usermod -aG docker $USER
 sudo sh -c 'echo "{\"registry-mirrors\": [\"https://mirror.gcr.io\", \"https://daocloud.io\", \"https://c.163.com/\", \"https://huecker.io/\", \"https://registry.docker-cn.com\"]}" > /etc/docker/daemon.json'
 sudo systemctl restart docker
